@@ -166,7 +166,7 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  teams = {}
+  teams = []
   game_hash.each do |team, member|
       teams.push(game_hash[team][:players])
   end
