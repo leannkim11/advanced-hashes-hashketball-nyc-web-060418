@@ -156,7 +156,7 @@ end
 def player_numbers(team_name)
   numbers = []
   game_hash.each do |team, member|
-    if name_of_team == game_hash[team][:team_name]
+    if team_name == game_hash[team][:team_name]
       game_hash[team][:players].each do |name, stats|
         numbers.push(stats[:number])
       end
@@ -176,28 +176,28 @@ end
 # def big_shoe_rebounds
 #   names = []
 #   shoe_sizes = []
-# 
+#
 #   game_hash.each do |team, member|
 #     game_hash[team][:players].each do |name,stats|
 #       names.push(name)
 #       shoe_sizes.push(stats[:shoe])
 #     end
 #   end
-# 
+#
 #   largest = -1
 #   shoe_sizes.each do |x|
 #     if x > largest
 #       largest = x
 #     end
 #   end
-# 
+#
 #   player_with_largest = names[shoe_sizes.index(largest)]
-# 
+#
 #   game_hash.each do |team, member|
 #     game_hash[team][:players].each do |name, stats|
 #      if player_with_largest == name
 #        return stats[:rebounds]
-# 
+#
 #       end
 #     end
 #   end
